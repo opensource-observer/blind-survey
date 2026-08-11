@@ -1,0 +1,28 @@
+{
+  "formId": "1AbCdEf",
+  "info": { "title": "Open Source Ecosystem Sensing" },
+  "settings": { "emailCollectionType": "VERIFIED" },
+  "items": [
+    {
+      "itemId": "1a2b3c",
+      "title": "Paste your contribution block here",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": { "paragraph": true }
+        }
+      }
+    },
+    {
+      "itemId": "4d5e6f",
+      "title": "Your name",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": { "paragraph": false }
+        }
+      }
+    }
+  ],
+  "responderUri": "https://docs.google.com/forms/d/e/1AbCdEf/viewform"
+}

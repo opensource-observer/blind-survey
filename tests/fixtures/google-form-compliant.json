@@ -1,0 +1,18 @@
+{
+  "formId": "1AbCdEf",
+  "info": { "title": "Open Source Ecosystem Sensing" },
+  "settings": { "emailCollectionType": "DO_NOT_COLLECT" },
+  "items": [
+    {
+      "itemId": "1a2b3c",
+      "title": "Paste your contribution block here",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": { "paragraph": true }
+        }
+      }
+    }
+  ],
+  "responderUri": "https://docs.google.com/forms/d/e/1AbCdEf/viewform"
+}

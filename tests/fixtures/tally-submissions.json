@@ -1,0 +1,42 @@
+{
+  "page": 1,
+  "limit": 50,
+  "hasMore": false,
+  "questions": [
+    { "id": "q_block", "type": "TEXTAREA", "title": "Paste your contribution block here" }
+  ],
+  "submissions": [
+    {
+      "id": "sub_aaa",
+      "respondentId": "resp_111",
+      "createdAt": "2026-08-09T10:04:00.000Z",
+      "pdfUrl": "https://tally.so/pdf/sub_aaa",
+      "previewUrl": "https://tally.so/preview/sub_aaa",
+      "responses": [
+        {
+          "questionId": "q_block",
+          "answer": "SURVEY CONTRIBUTION\n- I'm confident that the review burden grows faster than the contributor base\n- I believe funding rewards visible work over load-bearing work"
+        }
+      ]
+    },
+    {
+      "id": "sub_bbb",
+      "respondentId": "resp_222",
+      "createdAt": "2026-08-09T11:20:00.000Z",
+      "pdfUrl": "https://tally.so/pdf/sub_bbb",
+      "previewUrl": "https://tally.so/preview/sub_bbb",
+      "responses": [
+        {
+          "questionId": "q_block",
+          "answer": "SURVEY CONTRIBUTION\n- My hunch is that nobody can say which projects the ecosystem could not survive losing"
+        }
+      ]
+    },
+    {
+      "id": "sub_empty",
+      "respondentId": "resp_333",
+      "createdAt": "2026-08-09T11:41:00.000Z",
+      "responses": [{ "questionId": "q_block", "answer": "   " }]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "BADBAD",
+  "status": "DRAFT",
+  "blocks": [
+    {
+      "uuid": "11111111-1111-4111-8111-111111111111",
+      "type": "FORM_TITLE",
+      "groupUuid": "11111111-1111-4111-8111-111111111111",
+      "groupType": "FORM_TITLE",
+      "payload": { "title": "Open Source Ecosystem Sensing" }
+    },
+    {
+      "uuid": "22222222-2222-4222-8222-222222222222",
+      "type": "TITLE",
+      "groupUuid": "22222222-2222-4222-8222-222222222222",
+      "groupType": "TITLE",
+      "payload": { "safeHTMLSchema": [["Your contribution"]] }
+    },
+    {
+      "uuid": "33333333-3333-4333-8333-333333333333",
+      "type": "TEXTAREA",
+      "groupUuid": "22222222-2222-4222-8222-222222222222",
+      "groupType": "QUESTION",
+      "payload": { "isRequired": false }
+    },
+    {
+      "uuid": "44444444-4444-4444-8444-444444444444",
+      "type": "INPUT_EMAIL",
+      "groupUuid": "44444444-4444-4444-8444-444444444444",
+      "groupType": "QUESTION",
+      "payload": { "isRequired": true }
+    },
+    {
+      "uuid": "55555555-5555-4555-8555-555555555555",
+      "type": "CAPTCHA",
+      "groupUuid": "55555555-5555-4555-8555-555555555555",
+      "groupType": "QUESTION",
+      "payload": {}
+    }
+  ],
+  "settings": {
+    "hasSelfEmailNotifications": true,
+    "hasRespondentEmailNotifications": true,
+    "hasPartialSubmissions": true,
+    "uniqueSubmissionKey": "email",
+    "submissionsLimit": 1,
+    "password": "hunter2",
+    "isClosed": false
+  }
+}

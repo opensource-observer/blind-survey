@@ -1,0 +1,5 @@
+SURVEY CONTRIBUTION
+- I'm confident that our team is unusually good at triaging security reports quickly, and almost nobody outside notices that
+- I believe download counts are treated as a health signal even though they mostly measure a single popular consumer
+- My hunch is that several projects in this ecosystem maintain near-identical build tooling because nobody wants to depend on someone else's
+- I believe the community underestimates how much documentation work keeps new contributors from giving up

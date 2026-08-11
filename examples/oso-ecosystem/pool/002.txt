@@ -1,0 +1,4 @@
+SURVEY CONTRIBUTION
+- I'm confident that the number of people able to review changes is falling behind the number of changes
+- I believe grant funding is now steady enough to plan a year of maintenance around
+- I believe users mostly want new capabilities and tolerate breakage to get them

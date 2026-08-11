@@ -1,0 +1,16 @@
+# Generated participant artifacts. Author under skills/participant/ and templates/.
+dist/
+
+# Engagement material. This entry is part of the anonymity design, not housekeeping.
+private/
+
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Internal build docs (specs, plans, agent workspaces). Never publish.
+docs/superpowers/
+.superpowers/

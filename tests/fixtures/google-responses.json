@@ -1,0 +1,25 @@
+{
+  "form": {
+    "formId": "1AbCdEf",
+    "items": [
+      {
+        "itemId": "item_1",
+        "title": "Paste your contribution block here",
+        "questionItem": { "question": { "questionId": "gq_block", "required": true, "textQuestion": { "paragraph": true } } }
+      }
+    ]
+  },
+  "responses": [
+    {
+      "responseId": "gr_aaa",
+      "createTime": "2026-08-09T10:04:00.000Z",
+      "lastSubmittedTime": "2026-08-09T10:04:00.000Z",
+      "answers": {
+        "gq_block": {
+          "questionId": "gq_block",
+          "textAnswers": { "answers": [{ "value": "SURVEY CONTRIBUTION\n- I believe the review burden grows faster than the contributor base" }] }
+        }
+      }
+    }
+  ]
+}

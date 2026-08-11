@@ -1,0 +1,38 @@
+# The instrument. /setup overwrites this file; hand-editing is fine too.
+# This checkout ships with a worked example: sensing across an open source ecosystem.
+name: oso-ecosystem-sensing
+title: Open Source Ecosystem Sensing
+audience: maintainers and funders across an open source ecosystem
+duration_minutes: 15
+
+submission:
+  provider: tally               # tally | google-forms | paper
+  form_id: null                 # filled in by /setup
+  form_url: null
+  field_label: "Paste your contribution block here"
+  block_header: SURVEY CONTRIBUTION
+
+anonymity:
+  expected_respondents: 50      # stated in the interview prompt and the trust brief
+  min_cell_size: 5              # below this, breadth is reported qualitatively
+
+questions:
+  - What is the biggest risk to the projects you depend on?
+  - What do funders misunderstand about the work you actually do?
+  - Which part of your work would stop first if your funding halved?
+  - What are you uniquely good at that nobody outside would guess?
+  - Which measure of your project's health do you distrust?
+  - What would you stop doing if nobody would notice?
+  - Where does the ecosystem duplicate effort it does not need to?
+  - What should never change about how this ecosystem works?
+  - What would have to be true for your project to still be maintained in five years?
+
+# Closed enums. The analyzer may not invent values, and every enum carries
+# `unspecified` so an ambiguous statement is never resolved by guessing.
+facets:
+  kind:  [observation, belief, hypothesis, constraint, asset, risk, question, unspecified]
+  role:  [maintainer, funder, user, researcher, unspecified]
+  scope: [funding, security, governance, tooling, community, unspecified]
+
+# Optional. Proper nouns the linter rejects inside statement text.
+stoplist: []

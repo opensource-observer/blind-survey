@@ -1,0 +1,22 @@
+[project]
+name = "blind-survey"
+version = "0.1.0"
+description = "An anonymous survey run as an agent-led interview, producing atomized statements."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Open Source Observer" }]
+dependencies = ["pyyaml>=6.0"]
+
+[project.urls]
+Homepage = "https://github.com/opensource-observer/blind-survey"
+Repository = "https://github.com/opensource-observer/blind-survey"
+Issues = "https://github.com/opensource-observer/blind-survey/issues"
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

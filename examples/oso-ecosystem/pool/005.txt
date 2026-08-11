@@ -1,0 +1,5 @@
+SURVEY CONTRIBUTION
+- I'm confident that our infrastructure spend is now the largest line we control
+- I believe we would stop writing release notes before we would stop reviewing pull requests, and nobody would complain
+- My hunch is that the informal rule of never merging your own pull request is the one norm holding code quality together
+- I believe researchers studying this ecosystem rely on activity metrics that miss most of the maintenance work entirely

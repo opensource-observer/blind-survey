@@ -1,0 +1,5 @@
+SURVEY CONTRIBUTION
+- I'm confident that funders reward visible feature launches far more than the maintenance work that keeps a project alive
+- I believe the first task to go if funding fell by half would be proactive security review rather than any visible feature
+- My hunch is that most funders judge a project's health by how often it publishes, not by how well it is maintained
+- I believe governance decisions here get made in private channels that newcomers never see

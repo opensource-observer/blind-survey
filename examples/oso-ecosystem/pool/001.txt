@@ -1,0 +1,4 @@
+SURVEY CONTRIBUTION
+- I'm confident that the review burden grows faster than the contributor base
+- I believe our users are the operators running this in production, and they care about upgrade safety more than features
+- My hunch is that funding follows visible releases rather than maintenance

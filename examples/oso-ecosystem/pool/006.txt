@@ -1,0 +1,5 @@
+SURVEY CONTRIBUTION
+- I'm confident that losing even one core maintainer would put several widely used packages at risk within a year
+- I believe our project would still be maintained in five years only if a second person learns the deployment process end to end
+- My hunch is that dependency risk gets discussed far less than funding risk, even though it is just as large
+- I believe funders would fund a security audit faster than they would fund routine dependency upgrades
