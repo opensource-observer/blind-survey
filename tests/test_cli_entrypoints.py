@@ -33,7 +33,7 @@ from tools.config import ROOT
 ENTRYPOINTS = (
     ("tools/compile.py", ()),
     ("tools/validate.py", ("--help",)),
-    ("tools/breadth.py", ("example/statements.jsonl", "role")),
+    ("tools/breadth.py", ("example/statements.jsonl", "subject_role")),
     ("tools/check_pool.py", ("--help",)),
     ("tools/verify_form.py", ("--help",)),
     ("tools/ingest.py", ("--help",)),

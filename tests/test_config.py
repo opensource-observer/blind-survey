@@ -98,6 +98,6 @@ def test_statement_keys_hold_no_submission_field(tmp_path):
 def test_constants_are_fixed():
     assert PROVIDERS == ("tally", "google-forms", "paper")
     assert CONFIDENCE_TIERS == ("high", "medium", "low")
-    assert len(QUANTIFIERS) == 6
-    assert QUANTIFIERS[0] == "broad consensus"
-    assert QUANTIFIERS[-1] == "contested — no side holds more of the room"
+    assert len(QUANTIFIERS) == 5
+    assert QUANTIFIERS[0] == "a recurring theme"
+    assert QUANTIFIERS[-1] == "contested across the material"

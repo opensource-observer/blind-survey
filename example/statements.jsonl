@@ -1,22 +1,22 @@
-{"statement": "Users mostly want new capabilities and tolerate breakage to get them", "confidence": "medium", "kind": "belief", "role": "unspecified", "scope": "tooling"}
-{"statement": "The review burden grows faster than the contributor base", "confidence": "high", "kind": "risk", "role": "maintainer", "scope": "community"}
-{"statement": "Download counts are treated as a health signal even though they mostly measure a single popular consumer", "confidence": "medium", "kind": "observation", "role": "maintainer", "scope": "governance"}
-{"statement": "Funders would fund a security audit faster than they would fund routine dependency upgrades", "confidence": "medium", "kind": "belief", "role": "funder", "scope": "security"}
-{"statement": "Funders reward visible feature launches far more than the maintenance work that keeps a project alive", "confidence": "high", "kind": "belief", "role": "funder", "scope": "funding"}
-{"statement": "The informal rule of never merging your own pull request is the one norm holding code quality together", "confidence": "low", "kind": "belief", "role": "maintainer", "scope": "governance"}
-{"statement": "Our users are the operators running this in production, and they care about upgrade safety more than features", "confidence": "medium", "kind": "belief", "role": "user", "scope": "tooling"}
-{"statement": "The number of people able to review changes is falling behind the number of changes", "confidence": "high", "kind": "risk", "role": "maintainer", "scope": "community"}
-{"statement": "The community underestimates how much documentation work keeps new contributors from giving up", "confidence": "medium", "kind": "belief", "role": "maintainer", "scope": "community"}
-{"statement": "Losing even one core maintainer would put several widely used packages at risk within a year", "confidence": "high", "kind": "risk", "role": "maintainer", "scope": "community"}
-{"statement": "Most funders judge a project's health by how often it publishes, not by how well it is maintained", "confidence": "low", "kind": "belief", "role": "funder", "scope": "governance"}
-{"statement": "Our infrastructure spend is now the largest line we control", "confidence": "high", "kind": "observation", "role": "maintainer", "scope": "funding"}
-{"statement": "Funding follows visible releases rather than maintenance", "confidence": "low", "kind": "belief", "role": "maintainer", "scope": "funding"}
-{"statement": "Our team is unusually good at triaging security reports quickly, and almost nobody outside notices that", "confidence": "high", "kind": "asset", "role": "maintainer", "scope": "security"}
-{"statement": "Our project would still be maintained in five years only if a second person learns the deployment process end to end", "confidence": "medium", "kind": "constraint", "role": "maintainer", "scope": "tooling"}
-{"statement": "Governance decisions here get made in private channels that newcomers never see", "confidence": "medium", "kind": "observation", "role": "maintainer", "scope": "governance"}
-{"statement": "Researchers studying this ecosystem rely on activity metrics that miss most of the maintenance work entirely", "confidence": "medium", "kind": "observation", "role": "researcher", "scope": "governance"}
-{"statement": "Grant funding is now steady enough to plan a year of maintenance around", "confidence": "medium", "kind": "belief", "role": "funder", "scope": "funding"}
-{"statement": "Several projects in this ecosystem maintain near-identical build tooling because nobody wants to depend on someone else's", "confidence": "low", "kind": "observation", "role": "maintainer", "scope": "tooling"}
-{"statement": "Dependency risk gets discussed far less than funding risk, even though it is just as large", "confidence": "low", "kind": "observation", "role": "maintainer", "scope": "governance"}
-{"statement": "The first task to go if funding fell by half would be proactive security review rather than any visible feature", "confidence": "medium", "kind": "constraint", "role": "maintainer", "scope": "security"}
-{"statement": "We would stop writing release notes before we would stop reviewing pull requests, and nobody would complain", "confidence": "medium", "kind": "constraint", "role": "maintainer", "scope": "tooling"}
+{"statement": "Users mostly want new capabilities and tolerate breakage to get them", "confidence": "medium", "kind": "belief", "subject_role": "unspecified", "scope": "tooling"}
+{"statement": "The review burden grows faster than the contributor base", "confidence": "high", "kind": "risk", "subject_role": "maintainer", "scope": "community"}
+{"statement": "Download counts are treated as a health signal even though they mostly measure a single popular consumer", "confidence": "medium", "kind": "observation", "subject_role": "maintainer", "scope": "governance"}
+{"statement": "Funders would fund a security audit faster than they would fund routine dependency upgrades", "confidence": "medium", "kind": "belief", "subject_role": "funder", "scope": "security"}
+{"statement": "Funders reward visible feature launches far more than the maintenance work that keeps a project alive", "confidence": "high", "kind": "belief", "subject_role": "funder", "scope": "funding"}
+{"statement": "The informal rule of never merging your own pull request is the one norm holding code quality together", "confidence": "low", "kind": "belief", "subject_role": "maintainer", "scope": "governance"}
+{"statement": "Our users are the operators running this in production, and they care about upgrade safety more than features", "confidence": "medium", "kind": "belief", "subject_role": "user", "scope": "tooling"}
+{"statement": "The number of people able to review changes is falling behind the number of changes", "confidence": "high", "kind": "risk", "subject_role": "maintainer", "scope": "community"}
+{"statement": "The community underestimates how much documentation work keeps new contributors from giving up", "confidence": "medium", "kind": "belief", "subject_role": "maintainer", "scope": "community"}
+{"statement": "Losing even one core maintainer would put several widely used packages at risk within a year", "confidence": "high", "kind": "risk", "subject_role": "maintainer", "scope": "community"}
+{"statement": "Most funders judge a project's health by how often it publishes, not by how well it is maintained", "confidence": "low", "kind": "belief", "subject_role": "funder", "scope": "governance"}
+{"statement": "Our infrastructure spend is now the largest line we control", "confidence": "high", "kind": "observation", "subject_role": "maintainer", "scope": "funding"}
+{"statement": "Funding follows visible releases rather than maintenance", "confidence": "low", "kind": "belief", "subject_role": "maintainer", "scope": "funding"}
+{"statement": "Our team is unusually good at triaging security reports quickly, and almost nobody outside notices that", "confidence": "high", "kind": "asset", "subject_role": "maintainer", "scope": "security"}
+{"statement": "Our project would still be maintained in five years only if a second person learns the deployment process end to end", "confidence": "medium", "kind": "constraint", "subject_role": "maintainer", "scope": "tooling"}
+{"statement": "Governance decisions here get made in private channels that newcomers never see", "confidence": "medium", "kind": "observation", "subject_role": "maintainer", "scope": "governance"}
+{"statement": "Researchers studying this ecosystem rely on activity metrics that miss most of the maintenance work entirely", "confidence": "medium", "kind": "observation", "subject_role": "researcher", "scope": "governance"}
+{"statement": "Grant funding is now steady enough to plan a year of maintenance around", "confidence": "medium", "kind": "belief", "subject_role": "funder", "scope": "funding"}
+{"statement": "Several projects in this ecosystem maintain near-identical build tooling because nobody wants to depend on someone else's", "confidence": "low", "kind": "observation", "subject_role": "maintainer", "scope": "tooling"}
+{"statement": "Dependency risk gets discussed far less than funding risk, even though it is just as large", "confidence": "low", "kind": "observation", "subject_role": "maintainer", "scope": "governance"}
+{"statement": "The first task to go if funding fell by half would be proactive security review rather than any visible feature", "confidence": "medium", "kind": "constraint", "subject_role": "maintainer", "scope": "security"}
+{"statement": "We would stop writing release notes before we would stop reviewing pull requests, and nobody would complain", "confidence": "medium", "kind": "constraint", "subject_role": "maintainer", "scope": "tooling"}

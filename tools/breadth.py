@@ -1,28 +1,32 @@
-"""Report how many statements sit in a cell, without naming anyone.
+"""Describe how much material supports a view, without naming anyone.
 
-A figure is returned only when both the cell and its complement clear
-`anonymity.min_cell_size` — five of six clears the threshold itself but names
-the one person who differed. Otherwise the answer is one of the six phrases in
-`rules/quantifiers.md`.
+The unit here is statements, never people. A statement record carries no field
+naming whoever wrote it, deliberately, so this module cannot count people even
+in principle. One person who says five things about security fills a cell of
+five on their own. That is why `describe()` never hands back a bare number: a
+count of statements is not a count of respondents, and printing it as one
+would claim precision this pipeline has no way to earn.
 
-Two of those six are judgment calls and this module never returns them: "an
-isolated but strategically important view" and "contested — no side holds more
-of the room" are chosen by a person reading the material.
+`anonymity.min_cell_size` marks the point below which there is too little
+material to call something a theme. It is not a k-anonymity control — it never
+was one, because five statements standing for one person are just as thin as
+five statements standing for five. Below that line, the honest answer is
+"limited evidence"; at or above it, the phrase comes from the cell's share of
+the total instead.
 
-The unit is statements, not people. A statement record carries no field naming
-whoever wrote it, deliberately, so this module cannot count people even in
-principle. One person who says five things about security fills a cell of five
-on their own, and at a minimum cell size of five that cell comes back as a bare
-figure standing for one person. The shipped example shows it: run this over
-`example/statements.jsonl` on `role` and the largest cell is a figure bigger
-than the number of submission files in that example's pool.
+The vocabulary is the five phrases in `rules/quantifiers.md`. One of them,
+"contested across the material", is a judgment call this module never makes
+on its own; a person reading the material chooses it, the way the phrase
+below could not know that two of a cell's five statements retract the other
+three.
 
-So a figure out of this module is not publishable on its own. Compare it against
-how many submissions the pool holds before it goes into anything anyone reads,
-and where a cell could be a few people each saying several things, use a phrase
-from `rules/quantifiers.md` instead.
+The only honest bound on how many *people* a cell could represent is the
+number of submissions the pool holds — one pool file is one submission, with
+no statement-level linkage to it. `main()` prints that count whenever the pool
+directory is available, and labels every number as statements so a reader
+cannot mistake either figure for a headcount.
 
-Usage:  uv run python tools/breadth.py private/work/statements.jsonl role
+Usage:  uv run python tools/breadth.py private/work/statements.jsonl subject_role --pool private/pool
 """
 from __future__ import annotations
 
@@ -38,38 +42,41 @@ from pathlib import Path
 # without it because pyproject.toml sets pythonpath = ["."].
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from tools.config import QUANTIFIERS, Survey, load_survey  # noqa: E402
+from tools.config import QUANTIFIERS, ROOT, Survey, load_survey  # noqa: E402
 
 # Bound from the canonical tuple, not local literals, so a wording change in
 # tools/config.py (and rules/quantifiers.md) cannot silently desynchronize
 # this module from it. Unpacking by position also fails loudly at import
-# time if the tuple's length ever changes. The two judgment-call phrases are
-# named so it is visible that this module never returns them.
-BROAD, SEVERAL, MINORITY, _STRATEGIC, ISOLATED, _CONTESTED = QUANTIFIERS
+# time if the tuple's length ever changes. The judgment-call phrase is named
+# so it is visible that this module never returns it on its own.
+RECURRING, APPEARS, LIMITED, SINGLE, _CONTESTED = QUANTIFIERS
 
 
-def describe(count: int, total: int, survey: Survey) -> int | str:
+def describe(count: int, total: int, survey: Survey) -> str:
     if count < 1:
         raise ValueError("nothing to describe: count is zero")
     if count > total:
         raise ValueError(f"count {count} is more than the total {total}")
 
-    minimum = survey.anonymity.min_cell_size
-    complement = total - count
-    if count >= minimum and (complement == 0 or complement >= minimum):
-        return count
-
     if count == 1:
-        return ISOLATED
+        return SINGLE
+
+    if count < survey.anonymity.min_cell_size:
+        return LIMITED
+
     share = count / total
     if share >= 0.66:
-        return BROAD
+        return RECURRING
     if share >= 0.33:
-        return SEVERAL
-    return MINORITY
+        return APPEARS
+    return LIMITED
 
 
-def tally(records: list[dict], facet: str, survey: Survey) -> dict[str, int | str]:
+def _plural(count: int, noun: str) -> str:
+    return f"{count} {noun}" if count == 1 else f"{count} {noun}s"
+
+
+def tally(records: list[dict], facet: str, survey: Survey) -> dict[str, str]:
     if facet not in survey.facets:
         raise ValueError(f"{facet!r} is not a declared facet in survey.yaml")
     counts = Counter(r[facet] for r in records if facet in r)
@@ -85,13 +92,31 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("statements", type=Path)
     parser.add_argument("facet")
     parser.add_argument("--survey", type=Path, default=None)
+    parser.add_argument(
+        "--pool",
+        type=Path,
+        default=ROOT / "private" / "pool",
+        help="submission pool, for the free denominator (default: private/pool)",
+    )
     args = parser.parse_args(argv)
 
     from tools.validate import load_jsonl
 
     survey = load_survey(args.survey)
-    for value, breadth in tally(load_jsonl(args.statements), args.facet, survey).items():
-        print(f"{value}: {breadth}")
+    records = load_jsonl(args.statements)
+    counts = Counter(r[args.facet] for r in records if args.facet in r)
+    breadth = tally(records, args.facet, survey)
+    total = sum(counts.values())
+
+    if args.pool.is_dir():
+        submissions = len(list(args.pool.glob("*.txt")))
+        print(f"{_plural(total, 'statement')} from {_plural(submissions, 'submission')}.")
+    else:
+        print(f"{_plural(total, 'statement')}.")
+    print("A cell of N statements represents at most N people, and possibly one.")
+    print()
+    for value, count in counts.most_common():
+        print(f"  {value}: {_plural(count, 'statement')} — {breadth[value]}")
     return 0
 
 

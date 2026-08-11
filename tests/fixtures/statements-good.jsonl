@@ -1,4 +1,4 @@
-{"statement": "Downstream users assume a dependency is maintained because it is widely installed", "confidence": "medium", "kind": "belief", "role": "maintainer", "scope": "security"}
-{"statement": "The review burden grows faster than the contributor base", "confidence": "high", "kind": "constraint", "role": "maintainer", "scope": "community"}
-{"statement": "Funding decisions reward visible work over load-bearing work", "confidence": "medium", "kind": "hypothesis", "role": "funder", "scope": "funding"}
-{"statement": "Nobody can say which projects the ecosystem could not survive losing", "confidence": "low", "kind": "question", "role": "unspecified", "scope": "unspecified"}
+{"statement": "Downstream users assume a dependency is maintained because it is widely installed", "confidence": "medium", "kind": "belief", "subject_role": "maintainer", "scope": "security"}
+{"statement": "The review burden grows faster than the contributor base", "confidence": "high", "kind": "constraint", "subject_role": "maintainer", "scope": "community"}
+{"statement": "Funding decisions reward visible work over load-bearing work", "confidence": "medium", "kind": "hypothesis", "subject_role": "funder", "scope": "funding"}
+{"statement": "Nobody can say which projects the ecosystem could not survive losing", "confidence": "low", "kind": "question", "subject_role": "unspecified", "scope": "unspecified"}

@@ -17,7 +17,7 @@ def test_rule_file_exists_with_its_exact_heading(path, heading):
     assert text.startswith(heading + "\n"), f"{path} must open with {heading!r}"
 
 
-def test_quantifier_rule_lists_all_six_verbatim():
+def test_quantifier_rule_lists_all_five_verbatim():
     text = Path("rules/quantifiers.md").read_text(encoding="utf-8")
     for quantifier in QUANTIFIERS:
         assert quantifier in text, f"missing quantifier: {quantifier!r}"

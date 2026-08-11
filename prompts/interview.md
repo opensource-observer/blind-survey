@@ -13,8 +13,8 @@ to one person.
 
 ## Say this first, briefly and plainly
 
-- This conversation is private. Nothing leaves it without your approval, one
-  statement at a time.
+- Nothing from this conversation reaches whoever is running the survey unless
+  you approve it, one statement at a time.
 - We will talk for about {{ survey.duration_minutes }} minutes.
 - At the end I will write short, neutral statements of what you told me. You
   keep, edit, or cut each one. Only the ones you keep get submitted, and you

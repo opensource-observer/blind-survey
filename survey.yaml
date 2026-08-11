@@ -14,7 +14,7 @@ submission:
 
 anonymity:
   expected_respondents: 50      # stated in the interview prompt and the trust brief
-  min_cell_size: 5              # below this, breadth is reported qualitatively
+  min_cell_size: 5              # below this, there is too little material to call it a theme
 
 questions:
   - What is the biggest risk to the projects you depend on?
@@ -30,9 +30,9 @@ questions:
 # Closed enums. The analyzer may not invent values, and every enum carries
 # `unspecified` so an ambiguous statement is never resolved by guessing.
 facets:
-  kind:  [observation, belief, hypothesis, constraint, asset, risk, question, unspecified]
-  role:  [maintainer, funder, user, researcher, unspecified]
-  scope: [funding, security, governance, tooling, community, unspecified]
+  kind:          [observation, belief, hypothesis, constraint, asset, risk, question, unspecified]
+  subject_role:  [maintainer, funder, user, researcher, unspecified]
+  scope:         [funding, security, governance, tooling, community, unspecified]
 
 # Optional. Proper nouns the linter rejects inside statement text.
 stoplist: []

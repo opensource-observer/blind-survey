@@ -58,12 +58,13 @@ works too, by hand.
 uv sync
 uv run pytest -q
 uv run python tools/compile.py
-uv run python tools/breadth.py example/statements.jsonl role
+uv run python tools/breadth.py example/statements.jsonl subject_role --pool example/pool
 ```
 
-The last command tallies the worked example: a number where a number cannot
-point at anyone, otherwise a phrase from `rules/quantifiers.md`. It counts
-statements, not people, so read that file before quoting a figure.
+The last command tallies the worked example: every cell as a phrase from
+`rules/quantifiers.md`, never a bare count standing for people, alongside the
+statement and submission counts so the ceiling on headcount is visible for
+free.
 
 ## Layout
 

@@ -16,12 +16,11 @@ ROOT = Path(__file__).resolve().parents[1]
 PROVIDERS = ("tally", "google-forms", "paper")
 CONFIDENCE_TIERS = ("high", "medium", "low")
 QUANTIFIERS = (
-    "broad consensus",
-    "several respondents",
-    "a minority view",
-    "an isolated but strategically important view",
-    "an isolated view",
-    "contested — no side holds more of the room",
+    "a recurring theme",
+    "appears more than once",
+    "limited evidence",
+    "a single statement",
+    "contested across the material",
 )
 
 

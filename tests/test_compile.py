@@ -183,7 +183,7 @@ def test_dunder_field_fails_the_build(tmp_path):
 def test_property_field_is_substituted(tmp_path):
     out = compile_source(src(tmp_path, "{{ survey.facet_names }}\n"), SURVEY, tmp_path)
     assert "kind" in out
-    assert "role" in out
+    assert "subject_role" in out
     assert "scope" in out
 
 

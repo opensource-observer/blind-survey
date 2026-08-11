@@ -24,21 +24,24 @@ Any finding is a stop. Fix the statement file, not the linter.
 Not in the findings, not in the run notes, not in a comment. Ask `breadth.py`:
 
 ```bash
-uv run python tools/breadth.py private/work/statements.jsonl role
+uv run python tools/breadth.py private/work/statements.jsonl subject_role
 ```
 
-It returns a number only when a number cannot point at anyone, and one of the six
-phrases from `rules/quantifiers.md` otherwise. Two of the six are judgment calls
-it never returns — choose those yourself, from the rule file.
+It always answers with one of the five phrases from `rules/quantifiers.md`,
+never a bare number standing for people — and it prints the statement count and,
+where the submission pool is reachable, the submission count alongside. One of
+the five is a judgment call it never returns on its own — choose that yourself,
+from the rule file.
 
 ## Before anything is shared
 
 - [ ] Both steps ran in fresh sessions, each given only its own named inputs.
 - [ ] `validate.py` is clean.
-- [ ] Nothing states a count that did not come from `breadth.py`.
-- [ ] Every figure `breadth.py` returned was checked against how many submissions
-      came in — it counts statements, not people — and any cell that could be one
-      person saying several things is written as a phrase.
+- [ ] Nothing states a count that did not come from `breadth.py`'s own output.
+- [ ] Every breadth phrase in `findings.md` is quoted from `breadth.py` verbatim,
+      with the statement and submission counts it printed alongside it — it
+      counts statements, not people, and the submission count is the only
+      honest bound on how many people a cell could represent.
 - [ ] No entry's substance points at who said it.
 - [ ] Every disagreement is framed as positions, not people.
 - [ ] The findings lead with something contested or surprising.

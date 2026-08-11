@@ -11,7 +11,7 @@ OK = {
     "statement": "The review burden grows faster than the contributor base",
     "confidence": "medium",
     "kind": "belief",
-    "role": "maintainer",
+    "subject_role": "maintainer",
     "scope": "community",
 }
 

@@ -40,7 +40,7 @@ def test_every_pool_bullet_produced_exactly_one_statement():
 
 def test_the_worked_statements_hold_an_unresolved_referent():
     records = load_jsonl(EXAMPLE / "statements.jsonl")
-    assert any(r["role"] == "unspecified" for r in records)
+    assert any(r["subject_role"] == "unspecified" for r in records)
 
 
 def test_breadth_over_the_worked_statements_never_leaks_a_small_cell():

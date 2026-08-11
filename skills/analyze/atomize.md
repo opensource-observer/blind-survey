@@ -70,9 +70,9 @@ SURVEY CONTRIBUTION
 - I believe users tolerate breakage to get new capabilities
 ```
 
-Bullet one defines what it means by "users", so its `role` resolves to `user`;
-bullet two never resolves the word, so its `role` stays `unspecified`. In
-`term-usage.yaml`:
+Bullet one defines what it means by "users", so its `subject_role` resolves to
+`user`; bullet two never resolves the word, so its `subject_role` stays
+`unspecified`. In `term-usage.yaml`:
 
 ```yaml
 - term: users
