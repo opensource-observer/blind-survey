@@ -1,11 +1,9 @@
 # blind-survey
 
-An anonymous survey run as an interview with an AI model. It produces short
-neutral statements you can count and cluster.
-
-For a program manager who wants candid input from a group and doesn't write
-code. Every rule and prompt is a markdown file you can read and argue with.
-There is no hosted service.
+BYOM ("bring your own model") anonymous survey run as an interview with an AI.
+It produces short neutral statements you can count and cluster. Every rule and
+prompt is a markdown file you can read and amend for your use case. Responses
+can be submitted via Tally or Google Forms.
 
 ## How it works
 
