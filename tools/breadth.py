@@ -14,8 +14,8 @@ whoever wrote it, deliberately, so this module cannot count people even in
 principle. One person who says five things about security fills a cell of five
 on their own, and at a minimum cell size of five that cell comes back as a bare
 figure standing for one person. The shipped example shows it: run this over
-`examples/oso-ecosystem/statements.jsonl` on `role` and the largest cell is a
-figure bigger than the number of submission files in that example's pool.
+`example/statements.jsonl` on `role` and the largest cell is a figure bigger
+than the number of submission files in that example's pool.
 
 So a figure out of this module is not publishable on its own. Compare it against
 how many submissions the pool holds before it goes into anything anyone reads,

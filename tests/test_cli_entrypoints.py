@@ -25,14 +25,15 @@ import pytest
 
 from tools.config import ROOT
 
-# (script, args). `build/compile.py` takes no arguments and does real work
+# (script, args). `tools/compile.py` takes no arguments and does real work
 # (it recompiles dist/ from the current survey.yaml) — it has no --help, so
-# it is run bare. The five modules under tools/ are argparse CLIs, so --help
-# is the side-effect-free way to spawn each one and still exercise the import.
+# it is run bare. The five other modules under tools/ are argparse CLIs, so
+# --help is the side-effect-free way to spawn each one and still exercise the
+# import.
 ENTRYPOINTS = (
-    ("build/compile.py", ()),
+    ("tools/compile.py", ()),
     ("tools/validate.py", ("--help",)),
-    ("tools/breadth.py", ("examples/oso-ecosystem/statements.jsonl", "role")),
+    ("tools/breadth.py", ("example/statements.jsonl", "role")),
     ("tools/check_pool.py", ("--help",)),
     ("tools/verify_form.py", ("--help",)),
     ("tools/ingest.py", ("--help",)),

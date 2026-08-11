@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from build.compile import CompileError, compile_source
+from tools.compile import CompileError, compile_source
 from tools.config import ROOT, load_survey
 
 SURVEY = load_survey(Path("survey.yaml"))
@@ -206,12 +206,12 @@ def test_callable_field_fails_the_build(tmp_path):
 
 
 def test_script_entrypoint_works_as_a_bare_script_invocation():
-    """`uv run python build/compile.py` is the documented command, run by an
+    """`uv run python tools/compile.py` is the documented command, run by an
     audience that cannot be asked to know about `-m`. Importing main() would
     not catch a sys.path regression here — this has to actually spawn the
     interpreter the way a person does."""
     result = subprocess.run(
-        [sys.executable, str(ROOT / "build" / "compile.py")],
+        [sys.executable, str(ROOT / "tools" / "compile.py")],
         cwd=ROOT,
         capture_output=True,
         text=True,

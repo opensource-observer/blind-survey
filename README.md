@@ -57,8 +57,8 @@ works too, by hand.
 ```bash
 uv sync
 uv run pytest -q
-uv run python build/compile.py
-uv run python tools/breadth.py examples/oso-ecosystem/statements.jsonl role
+uv run python tools/compile.py
+uv run python tools/breadth.py example/statements.jsonl role
 ```
 
 The last command tallies the worked example: a number where a number cannot
@@ -70,10 +70,11 @@ statements, not people, so read that file before quoting a figure.
 | Path | |
 | --- | --- |
 | `survey.yaml` | The instrument. The one file you will hand-edit. |
-| `rules/`, `schema/` | Doctrine. Inlined into `dist/`. |
-| `skills/` | The interview prompt and the four operator skills. |
-| `build/`, `tools/` | The compiler and the checks. |
-| `examples/` | A worked example you can run. |
+| `rules/` | Doctrine. Inlined into `dist/`. |
+| `prompts/` | The interview prompt and the trust brief. Inlined into `dist/`. |
+| `skills/` | The four skills: setup, administer, ingest, analyze. |
+| `tools/` | The compiler and the checks. |
+| `example/` | A worked example you can run. |
 | `dist/`, `private/` | Generated output and survey data. Both gitignored. |
 
 ## License

@@ -66,8 +66,8 @@ def test_strict_mode_passes_a_clean_pool(tmp_path):
 
 def test_main_reports_a_missing_pool_and_fails(tmp_path, capsys):
     """A missing pool must not read as `clean` — a typo'd path (the day
-    `examples/oso-ecosystem/pool` gets renamed, say) would otherwise pass
-    CI's screening step silently, every time, forever."""
+    `example/pool` gets renamed, say) would otherwise pass CI's screening
+    step silently, every time, forever."""
     missing = tmp_path / "does" / "not" / "exist"
     assert main(["--pool", str(missing)]) != 0
     assert "no such directory" in capsys.readouterr().out

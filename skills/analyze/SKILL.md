@@ -6,9 +6,9 @@ retains which statements arrived together, so it can partly reconstruct who said
 what however the list is ordered later. Only the files on disk cross between the
 two sessions.
 
-1. **Atomize** (`steps/01-atomize.md`) — pool bullets become statements, from
+1. **Atomize** (`atomize.md`) — pool bullets become statements, from
    approved text only.
-2. **Cluster** (`steps/02-cluster.md`) — group what matches, surface what
+2. **Cluster** (`cluster.md`) — group what matches, surface what
    conflicts, write the findings.
 
 Between the two, and again at the end:

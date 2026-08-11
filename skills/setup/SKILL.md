@@ -1,9 +1,10 @@
 # setup — field a survey with no form builder and no terminal
 
-## Who you are talking to
+## What you do
 
-A program manager who is not technical. They never open a form builder, write
-YAML, or run a command. You do all of that and report back in plain language.
+Interview whoever is setting up the survey. They may not want to open a form
+builder, write YAML, or run a command themselves, so do all of that yourself
+and report back in plain language.
 
 ## The interview
 
@@ -36,13 +37,13 @@ Fill in every key, not only the ones the conversation touched: `name`, `title`,
 (`expected_respondents`, `min_cell_size`), `questions`, `facets`, `stoplist`.
 
 Every list under `facets` needs `unspecified`, or the loader rejects it. Seed
-`stoplist` with the organization's own name if they gave you one. Hand-editing
-`survey.yaml` later is fine.
+`stoplist` with a name for what's being surveyed, if they gave you one.
+Hand-editing `survey.yaml` later is fine.
 
 ## Compile
 
 ```bash
-uv run python build/compile.py
+uv run python tools/compile.py
 ```
 
 This writes `dist/interview.md`, the prompt a respondent is handed, and
@@ -74,10 +75,10 @@ audience.
 - Requiring sign-in, capping one response per person, and allowing response
   editing are absent from the API in both directions, so a form built through it
   cannot come out with any of them turned on.
-- Standing up a GCP project and OAuth client is not reasonable to ask of this
-  program manager, so use a pre-configured template form they copy in Drive — a
-  copy inherits its settings — then confirm by hand in the UI: sign-in off, no
-  per-response limit, editing off.
+- Standing up a GCP project and OAuth client is not something to ask of
+  whoever is setting this up, so use a pre-configured template form they copy
+  in Drive — a copy inherits its settings — then confirm by hand in the UI:
+  sign-in off, no per-response limit, editing off.
 
 Either provider: write the resulting `form_id` and `form_url` back into
 `survey.yaml` once the form exists.
@@ -89,10 +90,10 @@ uv run python tools/verify_form.py
 ```
 
 Any violation stops setup here — fix the form, don't argue with the tool. Read
-its `cannot check` lines aloud to the program manager. On a Google Form there
-will be three — sign-in, the per-response limit, and editing — because the API
-cannot see any of them, which is why `/administer` re-runs this check before
-every pull.
+its `cannot check` lines aloud to whoever is setting this up. On a Google Form
+there will be three — sign-in, the per-response limit, and editing — because
+the API cannot see any of them, which is why `/administer` re-runs this check
+before every pull.
 
 ## Probe end to end
 

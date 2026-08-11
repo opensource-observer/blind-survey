@@ -25,9 +25,9 @@ jobs:
       # A compiled artifact is what a respondent reads. If it no longer builds,
       # nothing downstream is worth checking.
       - name: Participant artifacts compile
-        run: uv run python build/compile.py
+        run: uv run python tools/compile.py
 
       # The example pool ships in the repo, so it has to stay free of provider
       # fields, dates, emails and links.
       - name: Example pool is clean
-        run: uv run python tools/check_pool.py --pool examples/oso-ecosystem/pool --strict
+        run: uv run python tools/check_pool.py --pool example/pool --strict

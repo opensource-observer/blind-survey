@@ -1,12 +1,12 @@
 from pathlib import Path
 
-from build.compile import SOURCES, compile_source
 from tools.breadth import tally
 from tools.check_pool import screen
+from tools.compile import SOURCES, compile_source
 from tools.config import QUANTIFIERS, load_survey
 from tools.validate import check_all, load_jsonl
 
-EXAMPLE = Path("examples/oso-ecosystem")
+EXAMPLE = Path("example")
 SURVEY = load_survey(Path("survey.yaml"))
 
 
@@ -58,8 +58,8 @@ def test_both_participant_artifacts_compile():
 
 
 def test_the_analyze_steps_exist_and_name_their_inputs():
-    atomize = Path("skills/operator/analyze/steps/01-atomize.md").read_text(encoding="utf-8")
-    cluster = Path("skills/operator/analyze/steps/02-cluster.md").read_text(encoding="utf-8")
+    atomize = Path("skills/analyze/atomize.md").read_text(encoding="utf-8")
+    cluster = Path("skills/analyze/cluster.md").read_text(encoding="utf-8")
     assert "private/pool" in atomize
     assert "private/pool" not in cluster, "step 2 must never read the pool"
     assert "breadth.py" in cluster

@@ -40,7 +40,7 @@ def test_no_rule_file_uses_protocol_vocabulary():
 
 
 def test_schema_documents_the_three_fixed_fields():
-    text = Path("schema/statement.md").read_text(encoding="utf-8")
+    text = Path("rules/statement-schema.md").read_text(encoding="utf-8")
     for field in ("statement", "confidence", "submission"):
         assert field in text
     assert "survey.yaml" in text

@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from build.compile import SOURCES, compile_source
+from tools.compile import SOURCES, compile_source
 from tools.config import load_survey
 
 SURVEY = load_survey(Path("survey.yaml"))
@@ -76,7 +76,7 @@ def test_brief_ships_no_markers(brief):
 
 
 def test_compiling_writes_both_artifacts(tmp_path, monkeypatch):
-    import build.compile as compile_mod
+    import tools.compile as compile_mod
 
     monkeypatch.setattr(compile_mod, "ROOT", tmp_path)
     for name, src in SOURCES.items():

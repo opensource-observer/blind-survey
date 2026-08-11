@@ -7,7 +7,7 @@ session that has read nothing about this survey except the files below.
 
 1. `rules/statement-style.md` — what a statement may look like.
 2. `rules/anonymity.md` — the identifiability check.
-3. `schema/statement.md` — the keys a record may carry.
+3. `rules/statement-schema.md` — the keys a record may carry.
 4. `survey.yaml` — the facet lists. No value outside them is valid.
 
 ## Inputs

@@ -18,7 +18,7 @@ import re
 import sys
 from pathlib import Path
 
-# `uv run python build/compile.py` — the documented command, since the
+# `uv run python tools/compile.py` — the documented command, since the
 # audience for this repo cannot be asked to know about `-m` — only puts this
 # file's own directory on sys.path, not the repo root. The absolute
 # `tools.config` import below would fail without this. pytest gets away
@@ -28,8 +28,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from tools.config import ROOT, Survey, load_survey  # noqa: E402
 
 SOURCES = {
-    "interview": ROOT / "skills" / "participant" / "interview" / "SKILL.md",
-    "trust-brief": ROOT / "templates" / "trust-brief.md",
+    "interview": ROOT / "prompts" / "interview.md",
+    "trust-brief": ROOT / "prompts" / "trust-brief.md",
 }
 
 INCLUDE_RE = re.compile(r"<!--\s*include\s*:\s*(?P<path>[\w\-/.]+)\s*-->[ \t]*\n?")

@@ -9,10 +9,10 @@ off script and without the sign-off step.
 
 ## Answer process questions, not content questions
 
-Answer freely when respondents or the program manager ask how this works — what
-happens to a submission, how the anonymity holds up, when the form closes. Never
-ask about, comment on, or repeat what anyone said. You have no reason to read the
-pool during administration.
+Answer freely when respondents or whoever set up the survey ask how this works
+— what happens to a submission, how the anonymity holds up, when the form
+closes. Never ask about, comment on, or repeat what anyone said. You have no
+reason to read the pool during administration.
 
 ## Re-verify before every pull
 
